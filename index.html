@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="todo-app" role="application" aria-labelledby="app-title">
+    <header>
+      <div class="logo" aria-hidden>TD</div>
+      <div>
+        <h1 id="app-title">Simple To-Do List</h1>
+        <p class="lead">Add tasks, mark them done, delete. Works offline (localStorage).</p>
+      </div>
+    </header>
+
+    <section class="controls" aria-label="Add task">
+      <form id="addForm" class="new-task" onsubmit="return false;">
+        <input id="taskInput" type="text" placeholder="Add a new task and press Enter or click Add" aria-label="New task" />
+        <button id="addBtn" type="button" aria-label="Add task">Add</button>
+      </form>
+      <button id="clearBtn" class="secondary" type="button">Clear completed</button>
+    </section>
+
+    <ul id="tasks" class="tasks" aria-live="polite" aria-label="Task list"></ul>
+
+    <div class="footer">
+      <div id="count">0 tasks</div>
+      <div class="muted">Tip: press Enter to add a task</div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
